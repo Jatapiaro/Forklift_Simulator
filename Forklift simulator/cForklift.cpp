@@ -1,9 +1,17 @@
-//
-//  cForklift.cpp
-//  Forklift simulator
-//
-//  Created by Jacobo Tapia on 26/03/17.
-//  Copyright © 2017 Jacobo Tapia. All rights reserved.
-//
+#include "cForklift.h"
 
-#include <stdio.h>
+Forklift::Forklift(){
+    forkModel = glmReadOBJ("/Users/jacobotapia/Documents/Forklift_Simulator/ForkLift.obj");
+    glmVertexNormals(forkModel, 45.0f, false);
+    glmFacetNormals(forkModel);
+}
+
+Forklift::~Forklift(){}
+
+void Forklift::draw(){
+    glPushMatrix();
+    {
+        glmDraw(forkModel,GLM_MATERIAL | GLM_SMOOTH);
+    }
+    glPopMatrix();
+}
