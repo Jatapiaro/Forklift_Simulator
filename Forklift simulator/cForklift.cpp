@@ -7,8 +7,9 @@ Forklift::Forklift(){
     forkModel = glmReadOBJ("/Users/jacobotapia/Desktop/Forklift_Simulator/ForkLift.obj");
     glmVertexNormals(forkModel, 45.0f, false);
     glmFacetNormals(forkModel);
+    glmUnitize(forkModel);
     x = y = z = 0;
-    angle = 90;
+    angle = 0;
 }
 
 Forklift::~Forklift(){}
@@ -25,9 +26,9 @@ void Forklift::draw(){
 
 void Forklift::rotate(int direction){
     if(direction == 1){
-        angle+=0.5;
+        angle+=1;
     }else{
-        angle-=0.5;
+        angle-=1;
     }
 }
 
