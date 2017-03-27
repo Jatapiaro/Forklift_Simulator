@@ -35,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C0449D971E88DBAF00BA51B3 /* crate.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crate.mtl; sourceTree = "<group>"; };
+		C0449D981E88DBAF00BA51B3 /* crate.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crate.obj; sourceTree = "<group>"; };
 		C09502051E888F6000795A96 /* Forklift simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Forklift simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09502081E888F6000795A96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C09502111E88901000795A96 /* ForkLift.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ForkLift.mtl; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		C09502101E888FFF00795A96 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				C0449D971E88DBAF00BA51B3 /* crate.mtl */,
+				C0449D981E88DBAF00BA51B3 /* crate.obj */,
 				C09502111E88901000795A96 /* ForkLift.mtl */,
 				C09502121E88901000795A96 /* ForkLift.obj */,
 			);
