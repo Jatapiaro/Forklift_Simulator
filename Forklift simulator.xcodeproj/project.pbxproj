@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C09502091E888F6000795A96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09502081E888F6000795A96 /* main.cpp */; };
+		C09502161E88904500795A96 /* cForklift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C09502151E88904500795A96 /* cForklift.cpp */; };
+		C095021B1E88906900795A96 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09502181E88906900795A96 /* GLKit.framework */; };
+		C095021C1E88906900795A96 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09502191E88906900795A96 /* GLUT.framework */; };
+		C095021D1E88906900795A96 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095021A1E88906900795A96 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,13 @@
 /* Begin PBXFileReference section */
 		C09502051E888F6000795A96 /* Forklift simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Forklift simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09502081E888F6000795A96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C09502111E88901000795A96 /* ForkLift.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ForkLift.mtl; sourceTree = "<group>"; };
+		C09502121E88901000795A96 /* ForkLift.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ForkLift.obj; sourceTree = "<group>"; };
+		C09502141E88903300795A96 /* cForklift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cForklift.h; sourceTree = "<group>"; };
+		C09502151E88904500795A96 /* cForklift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cForklift.cpp; sourceTree = "<group>"; };
+		C09502181E88906900795A96 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C09502191E88906900795A96 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		C095021A1E88906900795A96 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C095021B1E88906900795A96 /* GLKit.framework in Frameworks */,
+				C095021C1E88906900795A96 /* GLUT.framework in Frameworks */,
+				C095021D1E88906900795A96 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +55,11 @@
 		C09501FC1E888F6000795A96 = {
 			isa = PBXGroup;
 			children = (
+				C09502131E88901F00795A96 /* header */,
+				C09502101E888FFF00795A96 /* assets */,
 				C09502071E888F6000795A96 /* Forklift simulator */,
 				C09502061E888F6000795A96 /* Products */,
+				C09502171E88906900795A96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +75,36 @@
 			isa = PBXGroup;
 			children = (
 				C09502081E888F6000795A96 /* main.cpp */,
+				C09502151E88904500795A96 /* cForklift.cpp */,
 			);
 			path = "Forklift simulator";
+			sourceTree = "<group>";
+		};
+		C09502101E888FFF00795A96 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C09502111E88901000795A96 /* ForkLift.mtl */,
+				C09502121E88901000795A96 /* ForkLift.obj */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		C09502131E88901F00795A96 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				C09502141E88903300795A96 /* cForklift.h */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		C09502171E88906900795A96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C09502181E88906900795A96 /* GLKit.framework */,
+				C09502191E88906900795A96 /* GLUT.framework */,
+				C095021A1E88906900795A96 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09502161E88904500795A96 /* cForklift.cpp in Sources */,
 				C09502091E888F6000795A96 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
