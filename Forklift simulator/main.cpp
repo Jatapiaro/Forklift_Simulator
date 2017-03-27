@@ -87,9 +87,27 @@ void reshape(int w, int h)
     gluPerspective(40.0, (GLdouble)w / (GLdouble)h, 0.01, 20.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(0, 5, -20,
+    gluLookAt(0, 0, -20,
               0, 0, 0,
               0, 1, 0);
+}
+
+void keyPress(unsigned char key, int x, int y) {
+    
+    switch(key){
+        case 'w':
+            forklift->move(1);
+            break;
+        case 's':
+            forklift->move(-1);
+            break;
+        case 'a':
+            forklift->rotate(1);
+            break;
+        case 'd':
+            forklift->rotate(-1);
+            break;
+    }
 }
 
 int main(int argc, char** argv)
@@ -100,6 +118,7 @@ int main(int argc, char** argv)
     glutInitWindowPosition(100, 50);
     glutCreateWindow("OBJ Loader!");
     glutReshapeFunc(reshape);
+    glutKeyboardFunc(keyPress);
     init();
     glutDisplayFunc(display);
     glutIdleFunc(idle);

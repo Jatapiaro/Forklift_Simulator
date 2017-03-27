@@ -19,9 +19,14 @@ public:
     
     Forklift();
     ~Forklift();
-    
     void draw();
     void update();
+    
+    void move(int direction);
+    void rotate(int direction);
+    
+    float x,y,z;
+    float angle;
     
     GLMmodel *forkModel;
     GLfloat	*mat0_specular;
