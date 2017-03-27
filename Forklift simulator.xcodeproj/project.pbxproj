@@ -12,6 +12,14 @@
 		C095021B1E88906900795A96 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09502181E88906900795A96 /* GLKit.framework */; };
 		C095021C1E88906900795A96 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09502191E88906900795A96 /* GLUT.framework */; };
 		C095021D1E88906900795A96 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C095021A1E88906900795A96 /* OpenGL.framework */; };
+		C095023A1E88931700795A96 /* glm_util.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502321E88931700795A96 /* glm_util.c */; };
+		C095023B1E88931700795A96 /* glm.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502331E88931700795A96 /* glm.c */; };
+		C095023C1E88931700795A96 /* glmimg_devil.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502341E88931700795A96 /* glmimg_devil.c */; };
+		C095023D1E88931700795A96 /* glmimg_jpg.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502351E88931700795A96 /* glmimg_jpg.c */; };
+		C095023E1E88931700795A96 /* glmimg_png.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502361E88931700795A96 /* glmimg_png.c */; };
+		C095023F1E88931700795A96 /* glmimg_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502371E88931700795A96 /* glmimg_sdl.c */; };
+		C09502401E88931700795A96 /* glmimg_sim.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502381E88931700795A96 /* glmimg_sim.c */; };
+		C09502411E88931700795A96 /* glmimg.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502391E88931700795A96 /* glmimg.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +44,16 @@
 		C09502181E88906900795A96 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C09502191E88906900795A96 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		C095021A1E88906900795A96 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		C09502301E8892D100795A96 /* glm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glm.h; sourceTree = "<group>"; };
+		C09502311E8892D100795A96 /* glmint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glmint.h; sourceTree = "<group>"; };
+		C09502321E88931700795A96 /* glm_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glm_util.c; sourceTree = "<group>"; };
+		C09502331E88931700795A96 /* glm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glm.c; sourceTree = "<group>"; };
+		C09502341E88931700795A96 /* glmimg_devil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_devil.c; sourceTree = "<group>"; };
+		C09502351E88931700795A96 /* glmimg_jpg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_jpg.c; sourceTree = "<group>"; };
+		C09502361E88931700795A96 /* glmimg_png.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_png.c; sourceTree = "<group>"; };
+		C09502371E88931700795A96 /* glmimg_sdl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_sdl.c; sourceTree = "<group>"; };
+		C09502381E88931700795A96 /* glmimg_sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_sim.c; sourceTree = "<group>"; };
+		C09502391E88931700795A96 /* glmimg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,14 @@
 		C09502071E888F6000795A96 /* Forklift simulator */ = {
 			isa = PBXGroup;
 			children = (
+				C09502321E88931700795A96 /* glm_util.c */,
+				C09502331E88931700795A96 /* glm.c */,
+				C09502341E88931700795A96 /* glmimg_devil.c */,
+				C09502351E88931700795A96 /* glmimg_jpg.c */,
+				C09502361E88931700795A96 /* glmimg_png.c */,
+				C09502371E88931700795A96 /* glmimg_sdl.c */,
+				C09502381E88931700795A96 /* glmimg_sim.c */,
+				C09502391E88931700795A96 /* glmimg.c */,
 				C09502081E888F6000795A96 /* main.cpp */,
 				C09502151E88904500795A96 /* cForklift.cpp */,
 			);
@@ -92,6 +118,8 @@
 		C09502131E88901F00795A96 /* header */ = {
 			isa = PBXGroup;
 			children = (
+				C09502301E8892D100795A96 /* glm.h */,
+				C09502311E8892D100795A96 /* glmint.h */,
 				C09502141E88903300795A96 /* cForklift.h */,
 			);
 			name = header;
@@ -167,6 +195,14 @@
 			files = (
 				C09502161E88904500795A96 /* cForklift.cpp in Sources */,
 				C09502091E888F6000795A96 /* main.cpp in Sources */,
+				C095023B1E88931700795A96 /* glm.c in Sources */,
+				C09502401E88931700795A96 /* glmimg_sim.c in Sources */,
+				C095023A1E88931700795A96 /* glm_util.c in Sources */,
+				C095023F1E88931700795A96 /* glmimg_sdl.c in Sources */,
+				C095023D1E88931700795A96 /* glmimg_jpg.c in Sources */,
+				C095023E1E88931700795A96 /* glmimg_png.c in Sources */,
+				C09502411E88931700795A96 /* glmimg.c in Sources */,
+				C095023C1E88931700795A96 /* glmimg_devil.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +331,7 @@
 				C095020E1E888F6000795A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
