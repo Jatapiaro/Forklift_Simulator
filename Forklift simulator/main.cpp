@@ -107,6 +107,12 @@ void keyPress(unsigned char key, int x, int y) {
         case 'd':
             forklift->rotate(-1);
             break;
+        case 'p':
+            forklift->move_fork(1);
+            break;
+        case 'l':
+            forklift->move_fork(-1);
+            break;
     }
 }
 

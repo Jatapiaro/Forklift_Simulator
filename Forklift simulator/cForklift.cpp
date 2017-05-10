@@ -10,6 +10,11 @@ Forklift::Forklift(){
     glmFacetNormals(forkModel);
     glmUnitize(forkModel);
     
+    fork = glmReadOBJ("/Users/jacobotapia/Desktop/Forklift_Simulator/brazo.obj");
+    glmVertexNormals(fork, 45.0f, false);
+    glmFacetNormals(fork);
+    glmUnitize(fork);
+    
     for(int i=0;i<4;i++){
         switch (i) {
             case 0:
@@ -22,7 +27,7 @@ Forklift::Forklift(){
                 wheels[i] = glmReadOBJ("/Users/jacobotapia/Desktop/Forklift_Simulator/rueda_trasera_derecha.obj");
                 break;
             case 3:
-                wheels[i] = glmReadOBJ("/Users/jacobotapia/Desktop/Forklift_Simulator/rueda_trasera_izquierda.obj");
+                wheels[i] = glmReadOBJ("/Users/jacobotapia/Desktop/Forklift_Simulator/rueda_trasera_derecha.obj");
                 break;
             default:
                 break;
@@ -33,7 +38,8 @@ Forklift::Forklift(){
     }
     
     x = y = z = 0;
-    angle = 0;
+    angle = wheels_angle =  0;
+    fork_position = -0.3;
 }
 
 Forklift::~Forklift(){}
@@ -47,26 +53,44 @@ void Forklift::draw(){
         glRotatef((angle-90), 0, 1, 0);
         glmDraw(forkModel,GLM_MATERIAL | GLM_SMOOTH);
         
-        for(int i=0;i<2;i++){
+        glPushMatrix();
+        {
+            glTranslatef(-1.09,fork_position,0);
+            glmDraw(fork, GLM_MATERIAL | GLM_SMOOTH);
+        }
+        glPopMatrix();
+        
+        for(int i=0;i<4;i++){
             {
                 glPushMatrix();
                 {
-                    
                     switch (i) {
                         case 0:
-                            glTranslatef(front_wheels_x,front_wheels_y,wheels_z);
+                            glTranslatef(front_wheels_x,wheels_y,front_wheels_z);
+                            //glRotatef(wheels_angle, 0, 0, 1);
+                            glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
+                            break;
+                        case 1:
+                            glTranslatef(front_wheels_x,wheels_y,-front_wheels_z);
+                            //glRotatef(wheels_angle, 0, 0, 1);
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
                             break;
                         
-                        case 1:
-                            glTranslatef(front_wheels_x,front_wheels_y,-wheels_z);
+                        case 2:
+                            glTranslatef(back_wheels_x,wheels_y,-back_wheels_z);
+                            //glRotatef(wheels_angle, 0, 0, 1);
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
                             break;
-                            
+                        
+                        case 3:
+                            glTranslatef(back_wheels_x,wheels_y,back_wheels_z);
+                            //glRotatef(wheels_angle, 0, 0, 1);
+                            glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
+                            break;
+                        
                         default:
                             break;
                     }
-                    
                 }
                 glPopMatrix();
             }
@@ -76,12 +100,25 @@ void Forklift::draw(){
 
 }
 
-
 void Forklift::rotate(int direction){
     if(direction == 1){
         angle+=1;
+        //wheels_angle+=1;
     }else{
         angle-=1;
+        //wheels_angle-=1;
+    }
+}
+
+void Forklift::move_fork(int direction){
+    if(direction==1){
+        if(fork_position<=1){
+            fork_position+=0.05;
+        }
+    }else{
+        if(fork_position>=-1){
+            fork_position-=0.05;
+        }
     }
 }
 

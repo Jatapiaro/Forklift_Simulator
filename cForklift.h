@@ -10,9 +10,11 @@
 #include <math.h>// NATE ROBINS' OBJ MODEL LOADER (http://devernay.free.fr/hacks/glm/)
 #include "glm.h"
 
-#define front_wheels_y -1.1
+#define wheels_y -1.1
 #define front_wheels_x -0.65
-#define wheels_z 0.55
+#define front_wheels_z 0.55
+#define back_wheels_x 0.40
+#define back_wheels_z 0.7
 
 
 class Forklift{
@@ -25,9 +27,12 @@ public:
     
     void move(int direction);
     void rotate(int direction);
+    void move_fork(int direction);
     
     float x,y,z;
     float angle;
+    float wheels_angle;
+    float fork_position;
     
     GLMmodel *forkModel;
     GLMmodel *fork;
