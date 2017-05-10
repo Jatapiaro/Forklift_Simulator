@@ -114,9 +114,10 @@ int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    //glutInitWindowSize(2000, 1000);
     glutInitWindowSize(800, 800);
-    glutInitWindowPosition(100, 50);
-    glutCreateWindow("OBJ Loader!");
+    glutInitWindowPosition(0, 0);
+    glutCreateWindow("Forklift simulator");
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyPress);
     init();
