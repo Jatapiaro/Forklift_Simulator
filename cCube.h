@@ -24,6 +24,7 @@ private:
     float	side;
     float	hside;
     Texture targas[6];
+
 };
 
 #endif __CUBE

@@ -40,7 +40,11 @@ Forklift::Forklift(){
     x = y = z = 0;
     angle = wheels_angle = wheels_rotation = 0;
     fork_position = -0.3;
+    xf = x-1.09;
+    yf = fork_position;
+    zf = 0;
     moving = true;
+    with_box = false;
 }
 
 Forklift::~Forklift(){}
@@ -50,13 +54,17 @@ void Forklift::draw(){
     
     glPushMatrix();
     {
-        glTranslated(x, y, z);
+        glTranslatef(x, y, z);
         glRotatef((angle-90), 0, 1, 0);
         glmDraw(forkModel,GLM_MATERIAL | GLM_SMOOTH);
         
         glPushMatrix();
         {
             glTranslatef(-1.09,fork_position,0);
+            float anglee = (angle*3.1416)/180;
+            xf = x+1.09;
+            yf = fork_position;
+            zf = z;
             glmDraw(fork, GLM_MATERIAL | GLM_SMOOTH);
         }
         glPopMatrix();
@@ -109,11 +117,15 @@ void Forklift::rotate(int direction){
     moving = false;
     if(direction == 1){
         angle+=1;
+        float cuadrante = (angle/360);
+        angle = cuadrante*360;
         if(wheels_angle<=45){
             wheels_angle+=1;
         }
     }else{
         angle-=1;
+        float cuadrante = (angle/360);
+        angle = cuadrante*360;
         if(wheels_angle>=-45){
             wheels_angle-=1;
         }

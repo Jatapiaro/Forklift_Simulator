@@ -30,6 +30,7 @@ public:
     void move_fork(int direction);
     
     float x,y,z;
+    float xf,yf,zf;
     float angle;
     float wheels_angle,wheels_rotation;
     float fork_position;
@@ -39,6 +40,7 @@ public:
      *it's rotating
      */
     bool moving;
+    bool with_box;
     
     GLMmodel *forkModel;
     GLMmodel *fork;
