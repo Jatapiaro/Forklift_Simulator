@@ -20,6 +20,9 @@
 		C095023F1E88931700795A96 /* glmimg_sdl.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502371E88931700795A96 /* glmimg_sdl.c */; };
 		C09502401E88931700795A96 /* glmimg_sim.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502381E88931700795A96 /* glmimg_sim.c */; };
 		C09502411E88931700795A96 /* glmimg.c in Sources */ = {isa = PBXBuildFile; fileRef = C09502391E88931700795A96 /* glmimg.c */; };
+		C0B218081EC3F210002771CD /* cBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0B218071EC3F210002771CD /* cBox.cpp */; };
+		C0B554461EC3E9A400E4DA63 /* cTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0B554451EC3E9A400E4DA63 /* cTexture.cpp */; };
+		C0B5544A1EC3EB0200E4DA63 /* cCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0B554491EC3EB0200E4DA63 /* cCube.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C0449D971E88DBAF00BA51B3 /* crate.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crate.mtl; sourceTree = "<group>"; };
-		C0449D981E88DBAF00BA51B3 /* crate.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crate.obj; sourceTree = "<group>"; };
 		C09502051E888F6000795A96 /* Forklift simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Forklift simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09502081E888F6000795A96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C09502111E88901000795A96 /* ForkLift.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ForkLift.mtl; sourceTree = "<group>"; };
@@ -56,6 +57,32 @@
 		C09502371E88931700795A96 /* glmimg_sdl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_sdl.c; sourceTree = "<group>"; };
 		C09502381E88931700795A96 /* glmimg_sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg_sim.c; sourceTree = "<group>"; };
 		C09502391E88931700795A96 /* glmimg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glmimg.c; sourceTree = "<group>"; };
+		C0B218071EC3F210002771CD /* cBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cBox.cpp; sourceTree = "<group>"; };
+		C0B5542E1EC3B79400E4DA63 /* brazo.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = brazo.mtl; sourceTree = "<group>"; };
+		C0B5542F1EC3B79400E4DA63 /* brazo.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = brazo.obj; sourceTree = "<group>"; };
+		C0B554301EC3B79400E4DA63 /* cono.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cono.mtl; sourceTree = "<group>"; };
+		C0B554311EC3B79400E4DA63 /* cono.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cono.obj; sourceTree = "<group>"; };
+		C0B554321EC3B79400E4DA63 /* cuerpo.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cuerpo.mtl; sourceTree = "<group>"; };
+		C0B554331EC3B79400E4DA63 /* cuerpo.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cuerpo.obj; sourceTree = "<group>"; };
+		C0B554341EC3B79400E4DA63 /* rueda_delantera_derecha.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_delantera_derecha.mtl; sourceTree = "<group>"; };
+		C0B554351EC3B79400E4DA63 /* rueda_delantera_derecha.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_delantera_derecha.obj; sourceTree = "<group>"; };
+		C0B554361EC3B79400E4DA63 /* rueda_delantera_izquierda.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_delantera_izquierda.mtl; sourceTree = "<group>"; };
+		C0B554371EC3B79400E4DA63 /* rueda_delantera_izquierda.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_delantera_izquierda.obj; sourceTree = "<group>"; };
+		C0B554381EC3B79400E4DA63 /* rueda_trasera_derecha.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_trasera_derecha.mtl; sourceTree = "<group>"; };
+		C0B554391EC3B79400E4DA63 /* rueda_trasera_derecha.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_trasera_derecha.obj; sourceTree = "<group>"; };
+		C0B5543A1EC3B79400E4DA63 /* rueda_trasera_izquierda.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_trasera_izquierda.mtl; sourceTree = "<group>"; };
+		C0B5543B1EC3B79400E4DA63 /* rueda_trasera_izquierda.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rueda_trasera_izquierda.obj; sourceTree = "<group>"; };
+		C0B5543C1EC3E35100E4DA63 /* WoodenBox02.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WoodenBox02.mtl; sourceTree = "<group>"; };
+		C0B5543D1EC3E35100E4DA63 /* WoodenBox02.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WoodenBox02.obj; sourceTree = "<group>"; };
+		C0B5543E1EC3E35100E4DA63 /* WoodPlanks_Normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodPlanks_Normal.jpg; sourceTree = "<group>"; };
+		C0B5543F1EC3E35100E4DA63 /* WoodPlanks_Greyscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodPlanks_Greyscale.jpg; sourceTree = "<group>"; };
+		C0B554401EC3E35100E4DA63 /* WoodPlanks_Color.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WoodPlanks_Color.jpg; sourceTree = "<group>"; };
+		C0B554441EC3E98A00E4DA63 /* cTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cTexture.h; sourceTree = "<group>"; };
+		C0B554451EC3E9A400E4DA63 /* cTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cTexture.cpp; sourceTree = "<group>"; };
+		C0B554471EC3EA3800E4DA63 /* cuboMario.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = cuboMario.tga; sourceTree = "<group>"; };
+		C0B554491EC3EB0200E4DA63 /* cCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cCube.cpp; sourceTree = "<group>"; };
+		C0B5544C1EC3F01800E4DA63 /* cBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cBox.h; sourceTree = "<group>"; };
+		C0B5544D1EC3F04500E4DA63 /* cCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cCube.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +121,8 @@
 		C09502071E888F6000795A96 /* Forklift simulator */ = {
 			isa = PBXGroup;
 			children = (
+				C0B554491EC3EB0200E4DA63 /* cCube.cpp */,
+				C0B554451EC3E9A400E4DA63 /* cTexture.cpp */,
 				C09502321E88931700795A96 /* glm_util.c */,
 				C09502331E88931700795A96 /* glm.c */,
 				C09502341E88931700795A96 /* glmimg_devil.c */,
@@ -104,6 +133,7 @@
 				C09502391E88931700795A96 /* glmimg.c */,
 				C09502081E888F6000795A96 /* main.cpp */,
 				C09502151E88904500795A96 /* cForklift.cpp */,
+				C0B218071EC3F210002771CD /* cBox.cpp */,
 			);
 			path = "Forklift simulator";
 			sourceTree = "<group>";
@@ -111,8 +141,26 @@
 		C09502101E888FFF00795A96 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				C0449D971E88DBAF00BA51B3 /* crate.mtl */,
-				C0449D981E88DBAF00BA51B3 /* crate.obj */,
+				C0B554471EC3EA3800E4DA63 /* cuboMario.tga */,
+				C0B5543C1EC3E35100E4DA63 /* WoodenBox02.mtl */,
+				C0B5543D1EC3E35100E4DA63 /* WoodenBox02.obj */,
+				C0B5543E1EC3E35100E4DA63 /* WoodPlanks_Normal.jpg */,
+				C0B5543F1EC3E35100E4DA63 /* WoodPlanks_Greyscale.jpg */,
+				C0B554401EC3E35100E4DA63 /* WoodPlanks_Color.jpg */,
+				C0B5542E1EC3B79400E4DA63 /* brazo.mtl */,
+				C0B5542F1EC3B79400E4DA63 /* brazo.obj */,
+				C0B554301EC3B79400E4DA63 /* cono.mtl */,
+				C0B554311EC3B79400E4DA63 /* cono.obj */,
+				C0B554321EC3B79400E4DA63 /* cuerpo.mtl */,
+				C0B554331EC3B79400E4DA63 /* cuerpo.obj */,
+				C0B554341EC3B79400E4DA63 /* rueda_delantera_derecha.mtl */,
+				C0B554381EC3B79400E4DA63 /* rueda_trasera_derecha.mtl */,
+				C0B554351EC3B79400E4DA63 /* rueda_delantera_derecha.obj */,
+				C0B554361EC3B79400E4DA63 /* rueda_delantera_izquierda.mtl */,
+				C0B554371EC3B79400E4DA63 /* rueda_delantera_izquierda.obj */,
+				C0B554391EC3B79400E4DA63 /* rueda_trasera_derecha.obj */,
+				C0B5543A1EC3B79400E4DA63 /* rueda_trasera_izquierda.mtl */,
+				C0B5543B1EC3B79400E4DA63 /* rueda_trasera_izquierda.obj */,
 				C09502111E88901000795A96 /* ForkLift.mtl */,
 				C09502121E88901000795A96 /* ForkLift.obj */,
 			);
@@ -122,9 +170,12 @@
 		C09502131E88901F00795A96 /* header */ = {
 			isa = PBXGroup;
 			children = (
+				C0B554441EC3E98A00E4DA63 /* cTexture.h */,
 				C09502301E8892D100795A96 /* glm.h */,
 				C09502311E8892D100795A96 /* glmint.h */,
 				C09502141E88903300795A96 /* cForklift.h */,
+				C0B5544C1EC3F01800E4DA63 /* cBox.h */,
+				C0B5544D1EC3F04500E4DA63 /* cCube.h */,
 			);
 			name = header;
 			sourceTree = "<group>";
@@ -200,12 +251,15 @@
 				C09502161E88904500795A96 /* cForklift.cpp in Sources */,
 				C09502091E888F6000795A96 /* main.cpp in Sources */,
 				C095023B1E88931700795A96 /* glm.c in Sources */,
+				C0B218081EC3F210002771CD /* cBox.cpp in Sources */,
 				C09502401E88931700795A96 /* glmimg_sim.c in Sources */,
 				C095023A1E88931700795A96 /* glm_util.c in Sources */,
 				C095023F1E88931700795A96 /* glmimg_sdl.c in Sources */,
 				C095023D1E88931700795A96 /* glmimg_jpg.c in Sources */,
 				C095023E1E88931700795A96 /* glmimg_png.c in Sources */,
+				C0B554461EC3E9A400E4DA63 /* cTexture.cpp in Sources */,
 				C09502411E88931700795A96 /* glmimg.c in Sources */,
+				C0B5544A1EC3EB0200E4DA63 /* cCube.cpp in Sources */,
 				C095023C1E88931700795A96 /* glmimg_devil.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
