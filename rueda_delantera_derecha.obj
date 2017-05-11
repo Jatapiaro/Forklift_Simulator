@@ -1,6 +1,6 @@
 # Blender v2.69 (sub 0) OBJ File: 'final.blend'
 # www.blender.org
-mtllib rueda_delantera_derecha.mtl
+#mtllib rueda_delantera_derecha.mtl
 o Torus.003_Torus.005
 v -2.971864 1.038307 1.944133
 v -3.106046 1.008876 1.943246

@@ -1,6 +1,6 @@
 # Blender v2.69 (sub 0) OBJ File: 'final.blend'
 # www.blender.org
-mtllib rueda_trasera_izquierda.mtl
+#mtllib rueda_trasera_izquierda.mtl
 o Torus.002_Torus.004
 v 1.741966 1.235827 -2.866535
 v 1.582257 1.200798 -2.867591

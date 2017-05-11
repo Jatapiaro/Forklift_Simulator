@@ -38,8 +38,9 @@ Forklift::Forklift(){
     }
     
     x = y = z = 0;
-    angle = wheels_angle =  0;
+    angle = wheels_angle = wheels_rotation = 0;
     fork_position = -0.3;
+    moving = true;
 }
 
 Forklift::~Forklift(){}
@@ -67,28 +68,32 @@ void Forklift::draw(){
                     switch (i) {
                         case 0:
                             glTranslatef(front_wheels_x,wheels_y,front_wheels_z);
-                            //glRotatef(wheels_angle, 0, 0, 1);
+                            glRotatef(wheels_angle, 0,1,0);
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
                             break;
                         case 1:
                             glTranslatef(front_wheels_x,wheels_y,-front_wheels_z);
-                            //glRotatef(wheels_angle, 0, 0, 1);
+                            glRotatef(wheels_angle, 0, 1, 0);
+                            if(moving){
+                                
+                            }
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
                             break;
                         
                         case 2:
                             glTranslatef(back_wheels_x,wheels_y,-back_wheels_z);
-                            //glRotatef(wheels_angle, 0, 0, 1);
+                            if(moving){
+                                
+                            }
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
                             break;
                         
                         case 3:
                             glTranslatef(back_wheels_x,wheels_y,back_wheels_z);
-                            //glRotatef(wheels_angle, 0, 0, 1);
+                            if(moving){
+                                
+                            }
                             glmDraw(wheels[i],GLM_MATERIAL | GLM_SMOOTH);
-                            break;
-                        
-                        default:
                             break;
                     }
                 }
@@ -101,12 +106,17 @@ void Forklift::draw(){
 }
 
 void Forklift::rotate(int direction){
+    moving = false;
     if(direction == 1){
         angle+=1;
-        //wheels_angle+=1;
+        if(wheels_angle<=45){
+            wheels_angle+=1;
+        }
     }else{
         angle-=1;
-        //wheels_angle-=1;
+        if(wheels_angle>=-45){
+            wheels_angle-=1;
+        }
     }
 }
 
@@ -123,12 +133,20 @@ void Forklift::move_fork(int direction){
 }
 
 void Forklift::move(int direction){
+    moving = true;
     if(direction == 1){
         z -= 0.05f * cos(CONVERSION);
         x -= 0.05f * sin(CONVERSION);
     }else{
         z += 0.05f * cos(CONVERSION);
         x += 0.05f * sin(CONVERSION);
+    }
+    if(wheels_angle!=0){
+        if(wheels_angle<0){
+            wheels_angle+=1;
+        }else{
+            wheels_angle-=1;
+        }
     }
 }
 

@@ -12,7 +12,7 @@
 // NATE ROBINS' OBJ MODEL LOADER (http://devernay.free.fr/hacks/glm/)
 #include "glm.h"
 #include "cForklift.h"
-
+#include "cBox.h"
 
 GLfloat		rotationY = 0.0f;
 GLfloat		rotationX = 0.0f;
@@ -23,6 +23,7 @@ GLfloat*	mat0_shininess;
 GLfloat*	light0_position;
 
 Forklift *forklift;
+Box *box;
 
 void init(void)
 {
@@ -34,6 +35,7 @@ void init(void)
     
     
     forklift = new Forklift();
+    box = new Box();
     
     light0_position = new GLfloat[4];
     light0_position[0] = 3;
@@ -70,6 +72,7 @@ void display(void)
     glMaterialfv(GL_FRONT, GL_SHININESS, mat0_shininess);
     
     forklift->draw();
+    box->draw();
     
     glutSwapBuffers();
 }

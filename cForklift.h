@@ -31,8 +31,14 @@ public:
     
     float x,y,z;
     float angle;
-    float wheels_angle;
+    float wheels_angle,wheels_rotation;
     float fork_position;
+    
+    /*
+     *If it's not moving
+     *it's rotating
+     */
+    bool moving;
     
     GLMmodel *forkModel;
     GLMmodel *fork;
