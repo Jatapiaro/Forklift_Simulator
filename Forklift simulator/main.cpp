@@ -22,6 +22,7 @@ GLfloat*	mat0_diffuse;
 GLfloat*	mat0_shininess;
 GLfloat*	light0_position;
 
+float deltaX, deltaY;
 Forklift *forklift;
 Box *box;
 
@@ -66,15 +67,22 @@ void init(void)
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
+
     glMaterialfv(GL_FRONT, GL_DIFFUSE, mat0_diffuse);
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat0_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, mat0_shininess);
+    glLoadIdentity();
+    gluLookAt(0, 0, -10,
+              0, 0, 0,
+              0, 1, 0);
+    glRotatef( deltaY, 1.0, 0.0, 0.0 );
+    glRotatef( deltaX, 0.0, 1.0, 0.0 );
     
     forklift->draw();
     box->draw();
     
     glutSwapBuffers();
+    
 }
 
 void idle(void)
@@ -90,7 +98,7 @@ void reshape(int w, int h)
     gluPerspective(40.0, (GLdouble)w / (GLdouble)h, 0.01, 20.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(0, 0, -5,
+    gluLookAt(0, 0, -10,
               0, 0, 0,
               0, 1, 0);
 }
@@ -119,6 +127,21 @@ void keyPress(unsigned char key, int x, int y) {
     }
 }
 
+void move( int x, int y )
+{
+    static int lastX = 0, lastY = 0;
+    deltaX -= (lastX - x);
+    deltaY += (lastY - y);
+    lastX = x;
+    lastY = y;
+}
+
+void mouse( int button, int state, int x, int y )
+{
+    
+}
+
+
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
@@ -130,6 +153,9 @@ int main(int argc, char** argv)
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyPress);
     init();
+    glutMotionFunc( move );
+    glutMouseFunc( mouse );
+    
     glutDisplayFunc(display);
     glutIdleFunc(idle);
     glutMainLoop();
